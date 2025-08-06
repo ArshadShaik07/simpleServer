@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>This is the home page</h2>
+    <input type="text" placeholder="Enter name" class="nameInput" />
+    <input type="number" placeholder="Enter age" class="ageInput" />
+    <button onclick="handleSubmit()">Submit</button>
+    <button
+      onclick="()=>{
+      window.location=`http://localhost:8000/details.html`
+    }"
+    >
+      Go to details
+    </button>
+  </body>
+
+  <script src="./scripts/index.js"></script>
+</html>
