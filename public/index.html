@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css" />
   </head>
   <body>
-    <h2>This is the home page</h2>
-    <input type="text" placeholder="Enter name" class="nameInput" />
-    <input type="number" placeholder="Enter age" class="ageInput" />
-    <button onclick="handleSubmit()">Submit</button>
-    <button
-      onclick="()=>{
-      window.location=`http://localhost:8000/details.html`
-    }"
-    >
-      Go to details
-    </button>
+    <h2>Update student details</h2>
+    <div class="input-div">
+      <input type="text" placeholder="Enter student-id " class="idInput" />
+      <input type="text" placeholder="Enter name" class="nameInput" />
+      <input type="number" placeholder="Enter age" class="ageInput" />
+    </div>
+    <div class="op-div">
+      <button onclick="handleSubmit('POST')">Add</button>
+      <button onclick="handleSubmit('DELETE')">Delete</button>
+      <button onclick="handleSubmit('PUT')" class="idInput">Update</button>
+    </div>
+    <button onclick="handleGoto()">Go to details</button>
   </body>
 
   <script src="./scripts/index.js"></script>

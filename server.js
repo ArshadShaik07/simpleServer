@@ -1,6 +1,7 @@
 import express from "express";
 import url from "url";
 import path from "path";
+import homeRouter from "./routes/router.js";
 
 const app = express();
 const data = [
@@ -13,15 +14,7 @@ const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/api/data", (req, res) => {
-  res.json(data);
-});
-
-app.post("/api/data", (req, res) => {
-  const { name, age } = req.body;
-  data.push({ name, age });
-  res.json(data);
-});
+app.use("/api/data", homeRouter);
 
 app.listen(8000, () => {
   console.log("server running at port 8000");
